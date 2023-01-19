@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.signup-container{
+    /* border: 2px solid red; */
+    width: 40%;
+    height: auto;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* top: 5rem; */
+    padding: 1rem;
+}
+.symbol{
+    font-size: 1.5rem;
+    color: black;
+    border-radius: 55%;
+  border: 1px solid black;
+  padding: 0.3rem;
+  background-color: rgb(161, 4, 161);
+}
+.signup-name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.signup-email{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.signup-password{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.signup-container>h2{
+    margin: 1rem 0 1rem 0;
+    font-size: 1.5rem;
+}
+.signup-form>div>label{
+    /* margin: 1rem 0 1rem 0; */
+    font-size: 1.2rem;
+    font-weight: 600;
+    /* border: 1px solid red; */
+}
+.signup-form>div>label>span{
+    color: red;
+    font-size: 1.2rem;
+}
+.signup-form>div>input{
+    width: 25vw;
+    height: 6vh;
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
+    border-color: grey;
+}
+.signup-form>div>button{
+    width: 25vw;
+    height: 5vh;
+    color: white;
+    background-color: rgb(25,118,210);
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+.signup-form>div>button:hover{
+    background-color: blue;
+}
+.signup-account{
+    width: 25vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.signup-account>p{
+    padding-right: 0.3rem;
+}

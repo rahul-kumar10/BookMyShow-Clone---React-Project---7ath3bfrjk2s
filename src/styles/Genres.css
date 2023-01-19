@@ -1,0 +1,27 @@
+.genre-section{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    height: auto;
+    width: 12vw;
+    padding: 0.8rem 0 0 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1.2rem;
+}
+.genre-list{
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.2rem;
+}
+.genre-list>button{
+    list-style-type: none;
+    font-size: 1.2rem;
+    line-height: 1.20;
+    border: none;
+    cursor: pointer;
+}
+.genre-data{
+    cursor: pointer;
+}

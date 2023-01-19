@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.checkout-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem;
+}
+.checkout-details{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+.checkout-summary{
+    width: 25vw;
+    height: 45vh;
+    border: 1px solid black;
+    margin: auto;
+    margin-right: 1rem;
+    padding: 0.8rem;
+}
+.checkout-summary>h2{
+    margin: 0.5rem 0;
+}
+.checkout{
+    width: 65vw;
+    height: 85vh;
+    border: 1px solid black;
+}
+.ticket-type{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+}
