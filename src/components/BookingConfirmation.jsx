@@ -10,6 +10,12 @@ const BookingConfirmation = () => {
 
     const bookingData = JSON.parse(localStorage.getItem('bookingDataValue'))
     const movieSelected = JSON.parse(localStorage.getItem('currentMovieBooking'));
+    // console.log('booking data', bookingData.seat)
+    const bookedSeatArray = [];
+    for (let i = 0; i < bookingData.seat.length; i++) {
+        bookedSeatArray.push(bookingData.seat[i]);
+    }
+    console.log(bookedSeatArray)
     const navigate = useNavigate();
 
     const homeButtonHandler = () => {
@@ -41,15 +47,15 @@ const BookingConfirmation = () => {
                         <h3>Date       :- <span>{bookingData.date}</span></h3>
                         <h3>Time       :- <span>{bookingData.time}</span></h3>
                         <h3>No of seats       :- <span>{bookingData.seat.length}</span></h3>
-                        <h3 className="seats-container" >
-                            {bookingData.seat.map((seat, index) => {
-                                <div className="seats" key={index} >
-                                    <span>{seat}</span>
-                                    {/* <span>-</span>
-                                <span>{seat[1]}</span> */}
-                                </div>
-                            })}
-                        </h3>
+                        <div className="seats-container" >
+                            <h3>Seat nos :-
+                                <span>
+                                    {bookedSeatArray.map((seat, index) => {
+                                        return <span key={index} > {seat},</span>
+                                    })}
+                                </span>
+                            </h3>
+                        </div>
                     </div>
                     <button onClick={homeButtonHandler} className='btn'>Go To Homepage</button>
                 </div>

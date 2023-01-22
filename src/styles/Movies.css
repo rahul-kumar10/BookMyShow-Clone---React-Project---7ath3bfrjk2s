@@ -49,7 +49,7 @@
     border: 1px solid black;
     text-align: center;
     margin: 0 0.5rem 1rem 0.5rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     cursor: pointer;
 }
 
@@ -72,4 +72,66 @@
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.8);
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+
+    .movies {
+        left: 20%;
+        margin: 0.5rem 0 0.5rem 1.5rem;
+        width: 75%;
+    } 
+    .movie-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        margin: auto;
+    }
+    .movie-container>img {
+        width: 85%;
+        height: 70%;
+    }
+    .movie-container>h2{
+        font-size: 0.8rem;
+    }
+    .movie-container {
+        width: 90%;
+        height: 90%;
+        margin: 0 0.5rem 1rem 0.5rem;
+    }
+    .lang-vote {
+        font-size: 1rem;
+    }
+    
+}
+
+@media only screen and (min-width: 100px) and (max-width: 601px) {
+
+    .movies {
+        left: 20%;
+        margin: 0.5rem 0 0.5rem 1.5rem;
+        width: 75%;
+    } 
+    .movie-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        margin: auto;
+    }
+    .movie-container>img {
+        width: 85%;
+        height: 70%;
+    }
+    .movie-container>h2{
+        font-size: 0.8rem;
+    }
+    .movie-container {
+        width: 90%;
+        height: 90%;
+        margin: 0 0.5rem 1rem 0.5rem;
+    }
+    .lang-vote {
+        font-size: 1rem;
+    }
+    
 }

@@ -172,3 +172,46 @@
     background-color: rgb(3, 198, 252);
     border: 1px solid rgb(3, 198, 252);
 }
+
+@media only screen and (min-width: 100px) and (max-width: 800px) {
+
+    .booking-details {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    .cinema>select {
+        height: auto;
+        width: auto;
+    }
+    .booking-date>input {
+        height: auto;
+        width: auto;
+    }
+    .booking-time>select {
+        height: auto;
+        width: auto;
+    }
+    .seats>div>p {
+        width: 1.4rem;
+        height: 1.4rem;
+        margin: 0 0.2rem 0 0.2rem;
+        font-size: 0.6rem;
+        margin-bottom: 0.3rem;
+    }
+    .screen {
+        width: 70%;
+        margin: auto;
+        margin-top: 0.8rem;
+        height: 8vh;
+    }
+    .booking-btn>button {
+        margin: 0.5rem;
+        width: auto;
+        height: auto;
+        font-size: 0.7rem;
+        padding: 0.3rem;
+        border-radius: 0.2rem;
+    }
+    
+}

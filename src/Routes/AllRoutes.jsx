@@ -14,13 +14,13 @@ const AllRoutes = () => {
   
   return (
     <Routes>
-        <Route path='/' element={<Movies />} />
-        <Route path='/seatbooking' element={<PrivateRoute><SeatBooking/></PrivateRoute>} />
-        <Route path='/wishlist' element={<Wishlist/>} />
-        <Route path ='/login' element={<Login  />} />
-        <Route path ='/signup' element={<SignUp />} />
-        <Route path ='/checkout' element={<Checkout />} />
-        <Route path ='/bookingconfirmation' element={<BookingConfirmation />} />  
+        <Route exact path='/' element={<Movies />} />
+        <Route exact path='/seatbooking' element={<PrivateRoute><SeatBooking/></PrivateRoute>} />
+        <Route exact path='/wishlist' element={<Wishlist/>} />
+        <Route exact path ='/login' element={<Login  />} />
+        <Route exact path ='/signup' element={<SignUp />} />
+        <Route exact path ='/checkout' element={<Checkout />} />
+        <Route exact path ='/bookingconfirmation' element={<BookingConfirmation />} />  
     </Routes>
   )
 }

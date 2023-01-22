@@ -38,12 +38,9 @@ const Login = () => {
         })
 
     }
-    // useEffect(() => {
-    //     loginHandler();
-    // },[])
 
     return (
-        <>
+        <div className="login">
             <Nav />
             <div className="login-container" >
                 <span className="symbol" >&#128275;</span>
@@ -66,7 +63,7 @@ const Login = () => {
                     <Link to='/signup'><p>Register</p></Link>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

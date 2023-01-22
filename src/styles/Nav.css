@@ -97,90 +97,75 @@
     border: 2px solid lightblue;
 }
 
-/* 
+
 @media only screen and (min-width: 600px) and (max-width: 1000px) {
+    
     .navbar {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 1fr 2fr;
         padding: 0.5rem 0.5rem 0.3rem 1rem;
     }
-
     .logo-image {
-        width: auto;
-        height: 8vh;
+        width: 40%;
     }
-
     .nav-section1 {
-        padding: 0.3rem 0.3rem 0.3rem 0.3rem;
+        padding: 0.3rem 1rem 0.3rem 1rem;
     }
-
     .nav-search {
-        margin-left: 3rem;
+        justify-content: center;
+        margin-left: 5%;
     }
-
     .nav-search>input {
-        width: auto;
-        margin-right: 1rem;
+        width: 40%;
+        margin-right: 10%;
         font-size: 1rem;
     }
-
     .nav-search>button {
         width: auto;
         font-size: 1rem;
     }
-
     .wishlist {
-        width: auto;
+        height: 7vh;
+        width: 10%;
         font-size: 2.5rem;
     }
-
     .nav-loginBtn>button {
-        border-radius: 5px;
-        font-size: 1rem;
-        padding: 0;
+        width: 90%;
+        font-size: 0.8rem;
     }
+} 
 
-} */
-/* 
-@media only screen and (min-width: 100px) and (max-width: 600px) {
+@media only screen and (min-width: 100px) and (max-width: 601px) {
+    
     .navbar {
-        display: grid;
         grid-template-columns: 1fr 3fr;
         padding: 0.5rem 0.5rem 0.3rem 1rem;
     }
-
     .logo-image {
-        width: auto;
-        height: 8vh;
+        width: 60%;
     }
-
     .nav-section1 {
-        padding: 0.3rem 0.3rem 0.3rem 0.3rem;
+        padding: 0.3rem 1rem 0.3rem 1rem;
     }
-
     .nav-search {
-        margin-left: 3rem;
+        justify-content: center;
+        margin-left: 5%;
     }
-
     .nav-search>input {
-        width: auto;
-        margin-right: 1rem;
+        width: 40%;
+        margin-right: 10%;
         font-size: 1rem;
     }
-
     .nav-search>button {
         width: auto;
         font-size: 1rem;
     }
-
     .wishlist {
-        width: auto;
-        font-size: 2.5rem;
+        height: 7vh;
+        width: 10%;
+        font-size: 2rem;
     }
-
     .nav-loginBtn>button {
-        border-radius: 5px;
-        font-size: 1rem;
-        padding: 0;
+        width: 90%;
+        font-size: 0.8rem;
     }
-} */
+} 
