@@ -3,8 +3,7 @@
     margin: 0;
     padding: 0;
 }
-.signup-container{
-    /* border: 2px solid red; */
+.login-container{
     width: 40%;
     height: auto;
     position: absolute;
@@ -15,7 +14,6 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    /* top: 5rem; */
     padding: 1rem;
 }
 .symbol{
@@ -26,36 +24,29 @@
   padding: 0.3rem;
   background-color: rgb(161, 4, 161);
 }
-.signup-name{
+.login-email{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-.signup-email{
+.login-password{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-.signup-password{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.signup-container>h2{
+.login-container>h2{
     margin: 1rem 0 1rem 0;
     font-size: 1.5rem;
 }
-.signup-form>div>label{
-    /* margin: 1rem 0 1rem 0; */
+.login-form>div>label{
     font-size: 1.2rem;
     font-weight: 600;
-    /* border: 1px solid red; */
 }
-.signup-form>div>label>span{
+.login-form>div>label>span{
     color: red;
     font-size: 1.2rem;
 }
-.signup-form>div>input{
+.login-form>div>input{
     width: 25vw;
     height: 6vh;
     margin: 0 0 1rem 0;
@@ -64,7 +55,7 @@
     border-radius: 0.5rem;
     border-color: black;
 }
-.signup-form>div>button{
+.login-form>div>button{
     width: 25vw;
     height: 5vh;
     color: white;
@@ -75,15 +66,15 @@
     cursor: pointer;
     margin-bottom: 1rem;
 }
-.signup-form>div>button:hover{
+.login-form>div>button:hover{
     background-color: blue;
 }
-.signup-account{
+.login-account{
     width: 25vw;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
 }
-.signup-account>p{
+.login-account>p{
     padding-right: 0.3rem;
 }

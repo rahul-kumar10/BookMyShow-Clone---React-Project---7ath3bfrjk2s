@@ -5,6 +5,7 @@ import Genres from "./Genres";
 import MovieCard from "./MovieCard";
 import Nav from "./Nav";
 
+
 const Movies = () => {
 
     const [movies, setMovies] = useState([]);
@@ -13,7 +14,7 @@ const Movies = () => {
     const [movieTitle, setMovieTitle] = useState("");
     const [currentMovie, setCurrentMovie] = useState([]);
     const [displayCard, setDisplayCard] = useState(false);
-    const [cardGenre, setCardGenre] = useState(0);
+
 
     useEffect(() => {
         fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=892507cb9b27f1d84f0eaa067c7d4632')
@@ -62,6 +63,7 @@ const Movies = () => {
         setDisplayCard(false);
     }
 
+
     return (
         <div className="landingPage" >
             <div className="nav-container">
@@ -78,11 +80,12 @@ const Movies = () => {
                             <div className="movie-container" key={movie.id} onClick={() => movieCardHandler(movie)} >
                                 <img
                                     src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-                                    alt="Movie Poster"
-                                />
+                                    alt="Movie Poster" />
                                 <h2>{movie.title}</h2>
-                                <p>{movie.original_language}</p>
-                                <p>{movie.vote_average}</p>
+                                <div className="lang-vote" >
+                                    <p>{movie.original_language}</p>
+                                    <p>{movie.vote_average}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
