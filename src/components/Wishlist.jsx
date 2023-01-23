@@ -16,6 +16,11 @@ const Wishlist = () => {
         getData();
     }, [])
 
+    const bookingButtonHandler = () => {
+        let movieBooking = currentMovie;
+        localStorage.setItem('currentMovieBooking', JSON.stringify(movieBooking));
+    }
+
     const wishlistRemoveHandler = (movie, index) => {
         wishlistData.splice(index, 1);
         localStorage.setItem('wishlistMovie', JSON.stringify(wishlistData));
@@ -41,7 +46,7 @@ const Wishlist = () => {
                                 <p>{movie.vote_average}</p>
                             </div>
                             <div className="wishlist-btn" >
-                                <button className="btn1" ><Link to='/seatbooking' style={{ textDecoration: 'none', color: 'black' }} >Book Tickets</Link></button>
+                                <button className="btn1" onClick={bookingButtonHandler} ><Link to='/seatbooking' style={{ textDecoration: 'none', color: 'black' }} >Book Tickets</Link></button>
                                 <button className="btn2" onClick={() => wishlistRemoveHandler(movie, index)} >Remove</button>
                             </div>
                         </div>
