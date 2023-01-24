@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Nav from "./Nav";
 import '../styles/Wishlist.css'
 
@@ -7,6 +7,9 @@ import '../styles/Wishlist.css'
 const Wishlist = () => {
 
     const [wishlistData, setWIshlistData] = useState([]);
+    // const [currentMovie, setCurrentMovie] = useState([]);
+
+    const navigate = useNavigate();
 
     const getData = () => {
         const wishlistMovie = JSON.parse(localStorage.getItem('wishlistMovie')) || [];
@@ -16,9 +19,12 @@ const Wishlist = () => {
         getData();
     }, [])
 
-    const bookingButtonHandler = () => {
-        let movieBooking = currentMovie;
+    
+
+    const bookingButtonHandler = (movie) => {
+        let movieBooking = movie;
         localStorage.setItem('currentMovieBooking', JSON.stringify(movieBooking));
+        navigate('/seatbooking');
     }
 
     const wishlistRemoveHandler = (movie, index) => {
@@ -46,7 +52,7 @@ const Wishlist = () => {
                                 <p>{movie.vote_average}</p>
                             </div>
                             <div className="wishlist-btn" >
-                                <button className="btn1" onClick={bookingButtonHandler} ><Link to='/seatbooking' style={{ textDecoration: 'none', color: 'black' }} >Book Tickets</Link></button>
+                                <button className="btn1" onClick={()=> bookingButtonHandler(movie)}  >Book Tickets</button>
                                 <button className="btn2" onClick={() => wishlistRemoveHandler(movie, index)} >Remove</button>
                             </div>
                         </div>
