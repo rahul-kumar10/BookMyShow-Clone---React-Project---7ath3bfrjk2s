@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
 import '../styles/MovieCard.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+
+// const initialState = {
+//     selectedMovie : false
+// }
 
 
 const MovieCard = ({ currentMovie, movieCardCloseHandler }) => {
-
     const [price, setPrice] = useState(0);
+    const [currentSelectedMovie, setCurrentMovieSelected] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const moviePrice = Math.floor(Math.random() * (300 - 250 + 1)) + 250;
@@ -22,7 +27,12 @@ const MovieCard = ({ currentMovie, movieCardCloseHandler }) => {
 
     const bookingButtonHandler = () => {
         let movieBooking = currentMovie;
+        setCurrentMovieSelected(true);
         localStorage.setItem('currentMovieBooking', JSON.stringify(movieBooking));
+    }
+    if (currentSelectedMovie) {
+        localStorage.setItem('selectedMovie', JSON.stringify(currentSelectedMovie));
+        navigate('/seatbooking')
     }
 
     return (
@@ -38,7 +48,7 @@ const MovieCard = ({ currentMovie, movieCardCloseHandler }) => {
                 <p>{currentMovie.overview}</p>
                 <p className="movie-price" >&#8377; <span>{price}</span></p>
                 <div className="card-btn" >
-                    <Link to='/seatbooking' style={{ textDecoration: 'none', color: 'black' }} ><button className="card-btn1" onClick={bookingButtonHandler} >Book Tickets</button></Link>
+                    <button className="card-btn1" onClick={bookingButtonHandler} >Book Tickets</button>
                     <button onClick={wishlistHandler} >Wishlist</button>
                 </div>
             </div>

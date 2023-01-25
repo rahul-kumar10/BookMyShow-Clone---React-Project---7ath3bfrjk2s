@@ -12,9 +12,12 @@ const initialState = {
 }
 
 const Login = () => {
-
     const [loginData, setLoginData] = useState(initialState);
     const navigate = useNavigate();
+    const movieAuthentication = JSON.parse(localStorage.getItem('selectedMovie'));
+    console.log('login')
+    console.log(movieAuthentication)
+
 
     const loginHandler = (e) => {
         e.preventDefault();
@@ -27,7 +30,10 @@ const Login = () => {
                 alert('Login Successfully')
                 localStorage.setItem('isAuth', JSON.stringify(loginData.isAuth))
                 localStorage.setItem('userNameData', JSON.stringify(loginData.name))
-                navigate('/seatbooking');
+                if(movieAuthentication){
+                    navigate('/seatbooking')
+                }
+                navigate('/');
             }
             else {
                 count++;

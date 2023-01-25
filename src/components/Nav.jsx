@@ -19,7 +19,7 @@ const Nav = ({ inputHandler, handleSubmit }) => {
                 <button type="button" className="wishlist" ><Link to='/wishlist' style={{ textDecoration: 'none', color: 'black' }} >&#9825;</Link></button>
                 <div className="nav-loginBtn" >
                     <button type="button" >
-                        <Link to='/login' style={{ textDecoration: 'none', color: 'black' }} ><span>&#128100;</span> {userName ? userName.split(' ')[0] : 'Login!'}</Link>
+                        <Link to='/signup' style={{ textDecoration: 'none', color: 'black' }} ><span>&#128100;</span> {userName ? userName.split(' ')[0] : 'Login!'}</Link>
                     </button>
                 </div>
             </div>
